@@ -1,2 +1,2 @@
-# spotify-postman-collection
-Postman Collection for Postman
+# Spotify Postman Collection
+Spotify Collection for Postman
