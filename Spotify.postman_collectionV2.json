@@ -1,0 +1,677 @@
+{
+    "info": {
+        "_postman_id": "34d618b3-63f2-4fa4-8424-6ab01ee630e7",
+        "name": "Spotify",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Album",
+            "item": [
+                {
+                    "name": "ALBUM: Get Multiply Album Details",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/albums?ids=3wStRuUMPfKHTzokF7Xn0K%2C6r20qOqY7qDWI0PPTxVMlC",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "albums"
+                            ],
+                            "query": [
+                                {
+                                    "key": "ids",
+                                    "value": "3wStRuUMPfKHTzokF7Xn0K%2C6r20qOqY7qDWI0PPTxVMlC"
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ALBUM: Get Album Details",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/albums/{{albumId}}",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ALBUM: Track Listing",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/albums/{{albumId}}/tracks",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "ARTIST: Albums",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/albums/{{albumId}}/tracks",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Player",
+            "item": [
+                {
+                    "name": "PLAYER:  Currently Playing",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/currently-playing",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Start/Resume",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/play",
+                        "description": "Start/Resume a User's Playback\n\nhttps://developer.spotify.com/console/put-play/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER: Volume Control",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"volume_percent\": 100\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/volume?volume_percent=50",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "volume"
+                            ],
+                            "query": [
+                                {
+                                    "key": "volume_percent",
+                                    "value": "50"
+                                }
+                            ]
+                        },
+                        "description": "Set Volume For User's Playback\n\nvolume_percent \n\nhttps://developer.spotify.com/documentation/web-api/reference/player/set-volume-for-users-playback/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER: Previous Track",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"volume_percent\": 100\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/previous",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER: Next Track",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n\t\"volume_percent\": 100\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/next",
+                        "description": "Skip User's Playback To Next Track\n\nhttps://developer.spotify.com/console/post-next/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Select Album, Play Track, Seek Position",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"context_uri\": \"spotify:album:2XlFUmzm8HEujlACVJToEq\",\r\n  \"offset\": {\r\n    \"position\": 1\r\n  },\r\n  \"position_ms\": 0\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/play",
+                        "description": "Start/Resume a User's Playback\n\nhttps://developer.spotify.com/console/put-play/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Device",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER: Devices",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/devices",
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Shuffle On",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/shuffle?state=true",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "shuffle"
+                            ],
+                            "query": [
+                                {
+                                    "key": "state",
+                                    "value": "true"
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Shuffle Off",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/shuffle?state=false",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "shuffle"
+                            ],
+                            "query": [
+                                {
+                                    "key": "state",
+                                    "value": "false"
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Seek",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/seek?position_ms=2500",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "seek"
+                            ],
+                            "query": [
+                                {
+                                    "key": "position_ms",
+                                    "value": "2500"
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Repeat Track",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/repeat?state=track",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "repeat"
+                            ],
+                            "query": [
+                                {
+                                    "key": "state",
+                                    "value": "track"
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Repeat Off",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/repeat?state=off",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "repeat"
+                            ],
+                            "query": [
+                                {
+                                    "key": "state",
+                                    "value": "off"
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Pause Track",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/pause",
+                        "description": "Start/Resume a User's Playback\n\nhttps://developer.spotify.com/console/put-play/"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Repeat Off Context",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"device_ids\": [\r\n    \"74ASZWbe4lXaubB36ztrGX\"\r\n  ]\r\n}"
+                        },
+                        "url": {
+                            "raw": "https://api.spotify.com/v1/me/player/repeat?state=context ",
+                            "protocol": "https",
+                            "host": [
+                                "api",
+                                "spotify",
+                                "com"
+                            ],
+                            "path": [
+                                "v1",
+                                "me",
+                                "player",
+                                "repeat"
+                            ],
+                            "query": [
+                                {
+                                    "key": "state",
+                                    "value": "context "
+                                }
+                            ]
+                        },
+                        "description": "Select the previous track"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "PLAYER:  Select Artist, Play Track, Seek Position",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": {
+                                "token": "{{bearerToken}}"
+                            }
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n  \"context_uri\": \"spotify:artist:6r20qOqY7qDWI0PPTxVMlC\",\r\n  \"position_ms\": 0\r\n}"
+                        },
+                        "url": "https://api.spotify.com/v1/me/player/play",
+                        "description": "Start/Resume a User's Playback\n\nhttps://developer.spotify.com/console/put-play/"
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
